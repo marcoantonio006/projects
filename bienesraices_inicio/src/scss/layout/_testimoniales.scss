@@ -1,0 +1,27 @@
+.testimonial{
+    background-color: $verde;
+    font-size: 2.4rem;
+    padding: 2rem;
+    color: $blanco;
+    border-radius: 1.5rem;
+
+    blockquote{
+        padding-left: 5rem;
+        position: relative; // se mueve libre por ahi
+
+        &::before{
+            content: '';
+            background-image: url(../img/comilla.svg);
+            background-repeat: no-repeat;
+            width: 6rem;
+            height: 8rem;
+            display: block;
+            position: absolute; // significa que ahi se queda ese elemento sin importar que otro quiera ocupar el espacio
+            left: -2rem; //left, rigth, bottom y top se usan para mover dentro del elemento, ej: en este caso el elemento se va mover -2rem de distancia de la parte izquierda del elemento
+        }
+    }
+    p{
+        text-align: end;
+        color: $blanco;
+    }
+}
