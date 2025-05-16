@@ -1,4 +1,22 @@
-export const db = [
+/* Con interface: 
+    interface Guitar {
+        id: number
+        name: string
+        image: string
+        description: string
+        price: number
+    }
+*/
+
+type Guitar = {
+    id: number
+    name: string
+    image: string
+    description: string
+    price: number
+}
+
+export const db : Guitar[] = [
   {
       id: 1,
       name: 'Lukather',

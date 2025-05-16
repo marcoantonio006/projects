@@ -4,7 +4,7 @@ import { useCart } from "./hooks/useCart"
 
 function App() {
 
-  const {data, cart, initialCart, addToCart, removeFromCart, increaseQuantity,       decreaseQuantity, cleanCart, isEmpty, cartTotal} = useCart()
+  const {data, cart, addToCart, removeFromCart, increaseQuantity, decreaseQuantity, cleanCart, isEmpty, cartTotal} = useCart()
 
   return (
     <>

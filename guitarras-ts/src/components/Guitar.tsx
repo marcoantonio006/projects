@@ -1,11 +1,22 @@
-export default function Guitar(props){
-// Tambien se puede aplicar Destructuring de objetos Guitar({guitar})
-    const guitar = props.guitar
-    const {id, name, image, description, price} = guitar
-    
+type Guitar = {
+    id: number
+    name: string
+    image: string
+    description: string
+    price: number
+}
 
+type GuitarProps = {
+    guitar : Guitar,
+    addToCart: (item: Guitar) => void
+}
+
+export default function Guitar( {guitar, addToCart} : GuitarProps){
+
+    const {name, image, description, price} = guitar
+    
     return(
-    <div className="col-md-6 col-lg-4 my-4 row align-items-center">
+            <div className="col-md-6 col-lg-4 my-4 row align-items-center">
                 <div className="col-4">
                     <img className="img-fluid" src={`/img/${image}.jpg`} alt="imagen guitarra"/>
                 </div>
@@ -16,7 +27,7 @@ export default function Guitar(props){
                     <button 
                         type="button"
                         className="btn btn-dark w-100 "
-                        onClick={() => props.addToCart(guitar)}
+                        onClick={() => addToCart(guitar)}
                     >Agregar al Carrito</button>
                 </div>
             </div>
