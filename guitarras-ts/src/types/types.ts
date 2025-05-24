@@ -15,3 +15,21 @@ export type Guitar = {
         price: number
     }
 */
+
+export type CartItem = Guitar & {
+    quantity: number
+}
+
+/* Types
+    export type GuitarItem = Pick<Guitar, 'id' | 'name' | 'price'> & {
+        quantity: number
+}
+*/
+
+/* Herencia con Interface
+    export interface GuitarItem extends Guitar & {
+    quantity: number
+}
+
+
+*/
